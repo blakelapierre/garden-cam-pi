@@ -6,6 +6,7 @@ ExecStartPre=mkdir -p /home/pi/images/video0
 ExecStart=/usr/bin/ffmpeg -i /dev/video0 -f image2 -vf fps=1/60 /home/pi/images/video0/%08d.jpg
 Restart=always
 RestartSec=2
+User=pi
 
 [Install]
 WantedBy=multi-user.target
